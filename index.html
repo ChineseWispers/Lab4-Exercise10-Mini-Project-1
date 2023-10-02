@@ -15,6 +15,10 @@
       .card {
         max-width: 40rem;
       }
+      .dropdown-menu {
+        padding: 0.5rem 0.5rem;
+      }
+
     </style>
   </head>
   <body>
@@ -29,22 +33,16 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
+                Categories
               </a>
+              <template id="category-template">
+                <li><div class="dropdown-item" onclick="filterCategories(this)"></a></li>
+              </template>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -59,10 +57,16 @@
       <div class="col">
         <div class="card">
           <div class="card-body">
-            <img src="" class="card-img-top" alt="...">
+            <img src="" class="card-img-top">
+            <div class="class-img-overlay">
+              <p></p>
+            </div>
             <h5 class="card-title"></h5>
             <p class="card-text text-truncate"></p>
           </div>
+          <ul class="list-group-flush">
+            <li class="list-group-item"></li>
+          </ul>
         </div>
       </div>
     </template>
